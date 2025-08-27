@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 # Path to the saved model
-MODEL_PATH = 'artifacts/model_data.joblib'
+MODEL_PATH = 'model_data.joblib'
 
 # Load model and components
 model_data = joblib.load(MODEL_PATH)
@@ -101,3 +101,4 @@ def calculate_credit_score(input_df, base_score=300, scale_length=600):
     rating = get_rating(credit_score[0])
 
     return default_probability.flatten()[0], int(credit_score[0]), rating
+
